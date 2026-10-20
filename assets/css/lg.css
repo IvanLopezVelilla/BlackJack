@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400&display=swap');
+
+:root {
+    --green: #1a7a4a;
+    --green-dark: #0f4f2e;
+    --green-light: #2aad68;
+    --felt: #0d3b22;
+    --gold: #c9a84c;
+    --text: #f5f0e8;
+    --text-muted: rgba(245, 240, 232, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--felt);
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(26, 122, 74, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(15, 79, 46, 0.4) 0%, transparent 60%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(0,0,0,0.03) 10px,
+            rgba(0,0,0,0.03) 11px
+        );
+    font-family: 'DM Sans', sans-serif;
+    padding: 20px;
+}
+
+.loginCard {
+    width: min(420px, 100%);
+    background: rgba(10, 40, 24, 0.85);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 4px;
+    padding: clamp(24px, 5vw, 48px);
+    box-shadow:
+        0 0 0 1px rgba(201, 168, 76, 0.1),
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(201, 168, 76, 0.2);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.loginTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 5vw, 32px);
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.loginSubtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(11px, 2vw, 13px);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: clamp(24px, 4vw, 36px);
+}
+
+.loginDivider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 12px auto 24px;
+}
+
+.loginLabel {
+    display: block;
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.loginError {
+    color: #e05c6a;
+    font-size: clamp(10px, 1.5vw, 12px);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    margin-top: -2px;
+}
+
+.loginErrorGeneral {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.loginInput {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 3px;
+    padding: clamp(10px, 2vw, 14px) clamp(12px, 2.5vw, 16px);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(13px, 2vw, 15px);
+    font-weight: 300;
+    margin-bottom: clamp(16px, 3vw, 24px);
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+}
+
+.loginInput::placeholder {
+    color: var(--text-muted);
+}
+
+.loginInput:focus {
+    border-color: rgba(201, 168, 76, 0.6);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.loginBtn {
+    display: block;
+    width: 100%;
+    padding: clamp(12px, 2.5vw, 16px);
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 3px;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.loginBtn:hover {
+    background: linear-gradient(135deg, var(--green-light), var(--green));
+    box-shadow: 0 4px 20px rgba(26, 122, 74, 0.4);
+    transform: translateY(-1px);
+    color: var(--gold);
+}
+
+.loginBtn:active {
+    transform: translateY(0);
+}
+
+.registerBtn {
+    display: block;
+    width: 100%;
+    padding: clamp(12px, 2.5vw, 16px);
+    background: linear-gradient(135deg, #2a4a8c, #1a2f5e);
+    border: 1px solid rgba(150, 180, 255, 0.3);
+    border-radius: 3px;
+    color: #a8c4ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+}
+
+.registerBtn:hover {
+    background: linear-gradient(135deg, #3a5ebd, #2a4a8c);
+    box-shadow: 0 4px 20px rgba(42, 74, 140, 0.4);
+    transform: translateY(-1px);
+    color: #a8c4ff;
+}
+
+.registerBtn:active {
+    transform: translateY(0);
+}
+
+/* Link versions of buttons (for navigation) */
+.loginLink {
+    display: block;
+    width: 100%;
+    padding: clamp(12px, 2.5vw, 16px);
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 3px;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.loginLink:hover {
+    background: linear-gradient(135deg, var(--green-light), var(--green));
+    box-shadow: 0 4px 20px rgba(26, 122, 74, 0.4);
+    transform: translateY(-1px);
+    color: var(--gold);
+}
+
+.loginLink:active {
+    transform: translateY(0);
+}
+
+.registerLink {
+    display: block;
+    width: 100%;
+    padding: clamp(12px, 2.5vw, 16px);
+    background: linear-gradient(135deg, #2a4a8c, #1a2f5e);
+    border: 1px solid rgba(150, 180, 255, 0.3);
+    border-radius: 3px;
+    color: #a8c4ff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+}
+
+.registerLink:hover {
+    background: linear-gradient(135deg, #3a5ebd, #2a4a8c);
+    box-shadow: 0 4px 20px rgba(42, 74, 140, 0.4);
+    transform: translateY(-1px);
+    color: #a8c4ff;
+}
+
+.registerLink:active {
+    transform: translateY(0);
+}

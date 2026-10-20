@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack - Register</title>
+    <link rel="stylesheet" href="assets/css/lg.css"/>
+    <script src="assets/js/login.js"></script>
+</head>
+<body>
+    <div class="loginCard">
+        <h2 class="loginTitle">BlackJack Online</h2>
+        <div class="loginDivider"></div>
+        <p class="loginSubtitle">Create your account</p>
+
+        <label class="loginLabel" for="nickname">Nickname</label>
+        <p id="nicknameError" class="loginError" hidden></p>
+        <input class="loginInput" type="text" id="nickname" placeholder="Insert nickname" required>
+
+        <label class="loginLabel" for="email">Email</label>
+        <p id="emailError" class="loginError" hidden></p>
+        <input class="loginInput" type="email" id="email" placeholder="Insert email" required>
+
+        <label class="loginLabel" for="password">Password</label>
+        <p id="passwordError" class="loginError" hidden></p>
+        <input class="loginInput" type="password" id="password" placeholder="Insert password" required>
+
+        <button class="registerBtn" id="registerBtn">Register</button>
+        <a href="login.html" class="loginLink">Login</a>
+        <p id="generalError" class="loginError loginErrorGeneral" hidden></p>
+    </div>
+</body>
+</html>
