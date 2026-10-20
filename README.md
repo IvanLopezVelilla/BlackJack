@@ -31,7 +31,10 @@ A browser-based Blackjack game built with JavaScript, PHP, and MySQL/MariaDB. Pl
 ### 1. Place the project in your web server's document root
 
 For example, with XAMPP:
+
+```text
 <xampp-installation>/htdocs/blackjack
+```
 
 Start Apache and MySQL from the XAMPP control panel.
 
@@ -39,6 +42,7 @@ Start Apache and MySQL from the XAMPP control panel.
 
 Run this SQL in MySQL or MariaDB:
 
+```sql
 CREATE DATABASE blackJack
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
@@ -52,6 +56,7 @@ CREATE TABLE users (
     money INT,
     hash VARCHAR(300)
 );
+```
 
 ### 3. Configure the database connection
 
@@ -62,11 +67,16 @@ Do not commit real database credentials. For a production deployment, load them 
 ### 4. Open the game
 
 Visit:
+
+```text
 http://localhost/blackjack/
+```
 
 If you placed the project in a differently named folder, replace `blackjack` in the URL with that folder name.
 
 ## Project structure
+
+```text
 .
 ├── assets/
 │   ├── css/
@@ -97,6 +107,7 @@ If you placed the project in a differently named folder, replace `blackjack` in 
 ├── login.html                # Login view
 ├── register.html             # Registration view
 └── README.md                 # Project documentation
+```
 
 ## Notes
 
